@@ -1,0 +1,4 @@
+5c5
+< tsh> Job [1] (6172) terminated by signal 2
+---
+> tsh> Job [1] (6130) terminated by signal 2

@@ -1,0 +1,19 @@
+#
+# trace12.txt - Forward SIGTSTP to every process in foreground process group
+#
+tsh> tsh> ./mysplit 4
+tsh> Job [1] (9866) stopped by signal 20
+tsh> tsh> jobs
+tsh> [1] (9866) Stopped ./mysplit 4 
+tsh> tsh> /bin/ps a
+tsh>   PID TTY      STAT   TIME COMMAND
+ 1147 tty7     Ssl+   2:41 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+ 1427 tty1     Ss+    0:00 /sbin/agetty --noclear tty1 linux
+ 7586 pts/2    Ss     0:00 bash
+ 9721 pts/2    S+     0:00 sh test.sh
+ 9863 pts/2    S+     0:00 /usr/bin/perl ./sdriver.pl -t ./traces/trace12.txt -s ./tshref
+ 9864 pts/2    S+     0:00 ./tshref
+ 9866 pts/2    T      0:00 ./mysplit 4
+ 9867 pts/2    T      0:00 ./mysplit 4
+ 9875 pts/2    R      0:00 /bin/ps a
+tsh> 

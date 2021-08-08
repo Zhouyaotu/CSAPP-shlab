@@ -1,0 +1,28 @@
+5,7c5,7
+< tsh> ./bogus
+<  : Command not foundtsh> tsh> ./myspin 4 &
+< tsh> [1] (8839) ./myspin 4 &
+---
+> tsh> ./bogus: Command not found
+> tsh> tsh> ./myspin 4 &
+> tsh> [1] (8821) ./myspin 4 &
+21c21
+< tsh> (%2): No such Job
+---
+> tsh> %2: No such job
+23c23
+< tsh> Job [1] (8839) stopped by signal 20
+---
+> tsh> Job [1] (8821) stopped by signal 20
+25c25
+< tsh> (%2): No such Job
+---
+> tsh> %2: No such job
+27c27
+< tsh> [1] (8839) ./myspin 4 &
+---
+> tsh> [1] (8821) ./myspin 4 &
+29c29
+< tsh> [1] (8839) Running ./myspin 4 &
+---
+> tsh> [1] (8821) Running ./myspin 4 &

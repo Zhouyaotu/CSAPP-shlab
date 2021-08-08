@@ -1,0 +1,24 @@
+5c5
+< tsh> [1] (7555) ./myspin 4 &
+---
+> tsh> [1] (7546) ./myspin 4 &
+7c7
+< tsh> Job [2] (7557) stopped by signal 20
+---
+> tsh> Job [2] (7548) stopped by signal 20
+9,10c9,10
+< tsh> [1] (7555) Running ./myspin 4 &
+< [2] (7557) Stopped ./myspin 5 
+---
+> tsh> [1] (7546) Running ./myspin 4 &
+> [2] (7548) Stopped ./myspin 5 
+12c12
+< tsh> [2] (7557) ./myspin 5 
+---
+> tsh> [2] (7548) ./myspin 5 
+14,15c14,15
+< tsh> [1] (7555) Running ./myspin 4 &
+< [2] (7557) Running ./myspin 5 
+---
+> tsh> [1] (7546) Running ./myspin 4 &
+> [2] (7548) Running ./myspin 5 
